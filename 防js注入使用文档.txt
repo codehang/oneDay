@@ -1,0 +1,84 @@
+
+使用文档 ： 
+
+
+------------如果大家有什么疑问或者好的建议，欢迎交流，微信号x235527，谢谢！------------------
+  
+  --本类源码采用GBK编码，如果对大家造成什么不便，可以手动转义，请多多包涵！
+  
+
+	1 . 将源码直接拷贝到你的项目中，到爆之后直接可以调用ShieldJSAndSQl类的静态方法
+
+		 
+  汉语 ：
+	2 . 可以在shield.properties配置文件中添加或删除相对应键值对，注意键必须是阿拉伯数字，
+且按照顺序进行添加
+	
+	3 . 下面就可以直接调用其中的静态方法了
+
+  
+  	此类为屏蔽js注入和sql注入的工具类
+  	 
+  	  本类提供五个方法
+  		
+  		--boolean  shieldJSAll(String data,String shieldPath,String symoblPath,String 
+codePath) : 屏蔽素有的js注入，用户可以在properties中自行添加关键字等
+			
+			--特别注意这个方法中如果你想使用自己的配置文件，那么就必须重新设置文件的目录
+  		
+  		--void addKeyWord(String keyWord) : 您可以向properties中自动添加一个键值对
+  		
+  		--void delete(String key) : 您可以根据键删除对应的值，需要注意的是这里的删除是将“值”变为""
+  		
+  		--String encryptionMD5(String data)：你可以自行选择将您的数据通过这个方法进行加密，加密采用md5方式（一层加密）
+  		
+  		--boolean shieldSQL(String text) ：此方法目的是对获取的数据进行sql方式的判断
+
+  
+  English :
+
+	1 . Directly copy the source code into your project, the ShieldJSAndSQl class can be 	called directly after the static method
+
+	2 you can add or delete the corresponding keys in the shield.properties configuration file, note the key must be Arabia digital, and in order to add
+
+	3 below you can directly call the static method.
+  
+  This class is a tool for shielding JS injection and SQL injection.
+  	 
+  	  *This class provides five methods
+  		
+  		--boolean  shieldJSAll(String data,String shieldPath,String symoblPath,String codePath) : Shield known as the JS injection, the user can add the keyword in the properties, etc.
+			--Pay special attention to this method if you want to use your own configuration file, then you have to re set the file directory
+  		
+  		--void addKeyWord(String keyWord) : You can automatically add a key to properties
+   	
+   		--void delete(String key) : You can delete the corresponding value according to the key, need to pay attention to is that the "value" is changed to""
+  		
+  		--String encryptionMD5(String data)：You can choose to use this method to encrypt your data, encryption using MD5 (a layer of encryption)
+  		
+  		--boolean shieldSQL(String text) ：The purpose of this method is to judge the data obtained by SQL method.
+  
+
+
+
+
+中文：
+
+	1.1版本更新内容：
+
+		1-优化了内存的消耗
+
+		2-添加了策略模式，利用多态的方式进行开发
+
+英文：
+
+	1.1 version updates:
+		
+		1- optimized memory consumption
+
+		2- Added policy patterns and developed them using polymorphic methods
+
+
+
+
+
